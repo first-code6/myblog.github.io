@@ -1,22 +1,8 @@
 import React from 'react'
 import Button from '../../../component/Button'
+import data from '../../../data'
 
 const Tag = () => {
-
-  const listData = [
-    {
-      header: "首页"
-    },
-    {
-      header: "应用"
-    },
-    {
-      header: "游戏"
-    },
-    {
-      header: "关于我"
-    },
-  ]
 
   return (
     <div>
@@ -25,13 +11,19 @@ const Tag = () => {
               listStyleType: "none",
               padding: "0",
           }}
-          className="TagList"
         >
             {
-              listData.map(item => {
+              data.tagData.tagListData.map(item => {
                 return(
-                  <li style={{ padding: "10px", display: "inline"}} key={item.header}>
-                    <Button text={item.header} onClick={() => {alert(item.header)}}/>
+                  <li style={{
+                      display: "inline",
+                      padding: "10px"
+                    }} 
+                    key={item.header}
+                  >
+                    <a
+                      href={item.href}
+                    >{item.header}</a>
                   </li>
                 )
               })

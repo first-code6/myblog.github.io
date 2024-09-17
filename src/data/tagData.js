@@ -1,0 +1,22 @@
+const tagListData = [
+  {
+    header: "首页",
+     href: "/"
+  },
+  {
+    header: "应用",
+     href: "/app"
+  },
+  {
+    header: "游戏",
+    href: "/game"
+  },
+  {
+    header: "关于我",
+     href: "/about"
+  },
+] 
+
+export default {
+  tagListData,
+}
