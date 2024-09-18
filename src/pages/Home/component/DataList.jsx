@@ -2,7 +2,9 @@ import React from 'react'
 
 import data from '../../../data'
 
-const DataList = () => {
+const DataList = ({
+  dataType="nullData"
+}) => {
   return (
     <div
       style={{ 
@@ -13,7 +15,7 @@ const DataList = () => {
        }}
     >
       {
-        data.gameData.listData.map(item => {
+        data.listData[dataType].map(item => {
           return(
             <div
               style={{

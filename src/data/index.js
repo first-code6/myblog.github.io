@@ -1,8 +1,8 @@
-import gameData from './gameData.js'
+import listData from './listData.js'
 import tagData from './tagData.js'
 
 
 export default {
   tagData,
-  gameData,
+  listData,
 }

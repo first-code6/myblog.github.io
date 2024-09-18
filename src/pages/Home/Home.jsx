@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Tag from './component/Tag'
-import DataList from './component/DataList'
+import { Outlet } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -9,14 +9,15 @@ const Home = () => {
       style={{
         width: "100%",
         height: "100%",
-        background: "linear-gradient(90deg, rgba(26,26,37,1) 0%, rgba(12,1,36,1) 50%, rgba(33,32,43,1) 100%)",
+        background: "rgba(20, 20, 20)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
       }}
     >
       <Tag />
-      <DataList />
+      
+      <Outlet />
     </div>
   )
 }

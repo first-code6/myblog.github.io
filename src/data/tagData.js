@@ -9,7 +9,7 @@ const tagListData = [
   },
   {
     header: "游戏",
-    href: "/game"
+    href: "/games"
   },
   {
     header: "关于我",
