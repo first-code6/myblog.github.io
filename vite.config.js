@@ -8,5 +8,15 @@ export default defineConfig({
   build: {
     outDir: "docs",
     emptyOutDir: false,
-  }
+  },
+  // // 解决后端跨域问题
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://localhost:5173',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api/, "")
+  //     }
+  //   },
+  // }
 })
