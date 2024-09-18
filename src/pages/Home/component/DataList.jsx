@@ -27,6 +27,7 @@ const DataList = ({
                 position: "relative",
                 border: "1px solid rgb(100, 100, 100)"
               }}
+              key={item.header}
             >
 
               <a

@@ -1,8 +1,11 @@
 import React from 'react'
-import Button from '../../../component/Button'
+import { useNavigate } from 'react-router-dom'
+
 import data from '../../../data'
 
 const Tag = () => {
+
+  const navigate = useNavigate()
 
   return (
     <div>
@@ -15,15 +18,27 @@ const Tag = () => {
             {
               data.tagData.tagListData.map(item => {
                 return(
-                  <li style={{
+                  <li 
+                    style={{
                       display: "inline",
                       padding: "10px"
                     }} 
                     key={item.header}
                   >
-                    <a
+                    {/* <a
                       href={item.href}
-                    >{item.header}</a>
+                    >{item.header}</a> */}
+                    <div
+                      style={{
+                        float: "left",
+                        margin: "15px",
+                      }}
+                      onClick={() => {
+                        navigate(item.href)
+                      }}
+                    >
+                      {item.header}
+                    </div>
                   </li>
                 )
               })
