@@ -11,8 +11,10 @@ const Tag = () => {
     <div>
         <ul 
           style={{
+              display: "flex",
+              flexDirection: "row",
               listStyleType: "none",
-              padding: "0",
+              padding: 0,
           }}
         >
             {
@@ -20,7 +22,6 @@ const Tag = () => {
                 return(
                   <li 
                     style={{
-                      display: "inline",
                       padding: "10px"
                     }} 
                     key={item.header}
@@ -30,7 +31,6 @@ const Tag = () => {
                     >{item.header}</a> */}
                     <div
                       style={{
-                        float: "left",
                         margin: "15px",
                       }}
                       onClick={() => {
