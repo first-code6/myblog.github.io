@@ -7,7 +7,6 @@ export default defineConfig({
   base: "./",
   build: {
     outDir: "docs",
-    emptyOutDir: false,
   },
   // // 解决后端跨域问题
   // server: {
