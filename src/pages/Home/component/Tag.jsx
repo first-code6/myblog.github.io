@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import data from '../../../data'
@@ -6,6 +6,7 @@ import data from '../../../data'
 const Tag = () => {
 
   const navigate = useNavigate()
+  const [active, setActive] = useState(0)      // 当前被选中的标签
 
   return (
     <div>
@@ -14,26 +15,27 @@ const Tag = () => {
               display: "flex",
               flexDirection: "row",
               listStyleType: "none",
+              userSelect: "none",
+              cursor: "pointer",
               padding: 0,
           }}
         >
             {
-              data.tagData.tagListData.map(item => {
+              data.tagData.tagListData.map((item, index) => {
                 return(
                   <li 
                     style={{
-                      padding: "10px"
+                      padding: "10px",
+                      color: active === index ? "rgb(150,150,150)" : "",
                     }} 
                     key={item.header}
                   >
-                    {/* <a
-                      href={item.href}
-                    >{item.header}</a> */}
                     <div
                       style={{
                         margin: "15px",
                       }}
                       onClick={() => {
+                        setActive(index)
                         navigate(item.href)
                       }}
                     >

@@ -9,7 +9,6 @@ const Home = () => {
       style={{
         width: "100%",
         height: "100%",
-        background: "rgba(20, 20, 20)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

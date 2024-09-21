@@ -1,25 +1,15 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import data from '../../../data'
 import '../style/DataList.css'
+import { Outlet } from 'react-router-dom'
 
 const DataList = ({
   dataType="nullData"
 }) => {
 
-  const [pageStyle, setPageStyle] = useState({
-    marginTop: "20px",
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    boxSizing: "border-box",
-    padding: "10px",
-    userSelect: "none",
-    position: "relative",
-    border: "1px solid rgb(100, 100, 100)",
-    cursor: "pointer",
-    transition: "margin-top 0.3s ease-in-out",                
-  })
+  const navigate = useNavigate()
 
   return (
     <div
@@ -34,10 +24,10 @@ const DataList = ({
           return(
             <div
               className="page"
-              onMouseEnter={(e) => {
-                console.log(e)
-              }}
               key={item.header}
+              onClick={() => {
+                navigate(item.url)
+              }}
             >
 
               <p

@@ -5,6 +5,7 @@ import {
 
 import Home from '../pages/Home/Home'
 import DataList from '../pages/Home/component/DataList'
+import TicTacToe from '../pages/Ganmes/Tic-Tac-Toe/TicTacToe'
 
 const RouterPrimary = () => {
 
@@ -19,7 +20,7 @@ const RouterPrimary = () => {
             children: [
                 {
                     path: "/games",
-                    element: <DataList dataType="gameData" />
+                    element: <DataList dataType="gameData" />,
                 },
                 {
                     path: "/app",
@@ -30,6 +31,10 @@ const RouterPrimary = () => {
                     element: <DataList dataType="nullData" />
                 },
             ]
+        },
+        {
+            path: "/tictactoe",
+            element: <TicTacToe />
         }
     ]))
 }
